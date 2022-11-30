@@ -1,22 +1,39 @@
-const saldoPessoas = new Array(
-    {
-        nome: "Victor",
-        saldo: 2030
-    },
-    {
-        nome: "Lucas",
-        saldo: 6480
-    },
-    {
-        nome: "Olga",
-        saldo: 10560
-    }
-)
-let texto =""
-saldoPessoas.push({nome:"Gustavo",saldo:5630})
-saldoPessoas.sort(function(a,b){return a.saldo-b.saldo});
-saldoPessoas.forEach(function(valor, indice, vetor){
-    texto +="Posicao: "+indice+" Nome: "+valor.nome +" | Salário: "+valor.saldo+". "
-})
-console.log(texto)
+function intervaloRandomico (min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min)
 
+}
+
+function sorteioMega()
+{
+    let sorteio =[]
+    for(let index =1; index <6; index++)
+    {
+        if(index >=1 && <=3)
+        {
+            let num =intervaloRandomico(1,24)
+
+            while(sorteio.includes(num))
+            {
+                let num = intervaloRandomico(1,24)
+
+            }
+            sorteio.push(num)
+        }
+        else
+        {
+            let num = intervaloRandomico(25,60)
+
+            while(sorteio.includes(num))
+            {
+                let num =intervaloRandomico(25,60)
+            }
+        
+        sorteio.push(num)
+    }
+
+}
+
+console.log(sorteio.sort((a,b)=> a-b).toString())
+}
+sorteioMega()
